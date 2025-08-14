@@ -48,7 +48,7 @@ class MenuController extends Controller
                 'id' => $menu->id,
                 'name' => $menu->name,
                 'price' => $menu->price,
-                'image' => $menu->img,
+                'image' => $menu->image,
                 'qty' => 1,
             ];
         }
@@ -60,5 +60,50 @@ class MenuController extends Controller
             'message' => 'Menu added to cart successfully.',
             'cart' => $cart
         ]);
+    }
+
+    public function updateCart(Request $request) {
+        $itemId = $request->input('id');
+        $newQty = $request->input('qty');
+
+        if ($newQty <= 0) {
+            return response()->json([
+                'success' => false,
+            ]);
+        }
+
+        $cart = Session::get('cart');
+        if (isset($cart[$itemId])) {
+            $cart[$itemId]['qty'] = $newQty;
+            Session::put('cart', $cart);
+            Session::flash('success', 'Cart updated successfully.');
+
+            return response()->json(['success' => true]);
+        }
+
+        return response()->json(['success' => false]);
+    }
+
+    public function removeCart(Request $request)
+    {
+        $itemId = $request->input('id');
+
+        $cart = Session::get('cart');
+
+        if (isset($cart[$itemId])) {
+            unset($cart[$itemId]);
+            Session::put('cart', $cart);
+            Session::flash('success', 'Item removed from cart successfully.');
+
+            return response()->json(['success' => true]);
+        }
+
+        return response()->json(['success' => false, 'message' => 'Item not found in cart.']);
+    }
+
+    public function clearCart()
+    {
+        Session::forget('cart');
+        return redirect()->route('cart')->with('success', 'All items removed from cart successfully.');
     }
 }
