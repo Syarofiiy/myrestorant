@@ -1,6 +1,16 @@
 @extends('customer.layouts.master')
 
 @section('content')
+
+        <!-- Single Page Header start -->
+        <div class="container-fluid page-header py-5">
+            <h1 class="text-center text-white display-6">Cart</h1>
+            <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item active text-primary">Please review your order</li>
+            </ol>
+        </div>
+        <!-- Single Page Header End -->
+
 <div class="container-fluid py-5">
             <div class="container py-5">
                 @if (session('success'))
@@ -16,12 +26,12 @@
                     <table class="table">
                         <thead>
                           <tr>
-                            <th scope="col">Gambar</th>
+                            <th scope="col">Image</th>
                             <th scope="col">Menu</th>
-                            <th scope="col">Harga</th>
-                            <th scope="col">Jumlah</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
                             <th scope="col">Total</th>
-                            <th scope="col">Aksi</th>
+                            <th scope="col">Action</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -90,13 +100,13 @@
                     <div class="col-sm-8 col-md-7 col-lg-6 col-xl-4">
                         <div class="bg-light rounded">
                             <div class="p-4">
-                                <h2 class="display-6 mb-4">Total <span class="fw-normal">Pesanan</span></h2>
+                                <h2 class="display-6 mb-4">Order <span class="fw-normal">Total</span></h2>
                                 <div class="d-flex justify-content-between mb-4">
                                     <h5 class="mb-0 me-4">Subtotal</h5>
                                     <p class="mb-0">Rp{{number_format($subtotal, 0, ',', '.')}}</p>
                                 </div>
                                 <div class="d-flex justify-content-between">
-                                    <p class="mb-0 me-4">Pajak (10%)</p>
+                                    <p class="mb-0 me-4">Tax (10%)</p>
                                     <div class="">
                                         <p class="mb-0">Rp{{number_format($tax, 0, ',', '.')}}</p>
                                     </div>
@@ -110,7 +120,7 @@
                         </div>
                         <div class="d-flex justify-content-end">
                             <div class="mb-0 mb-3">
-                                <a href="{{ route('checkout') }}" class="btn border-secondary py-3 text-primary text-uppercase mb-4" type="button">Lanjut ke Pembayaran</a>
+                                <a href="{{ route('checkout') }}" class="btn border-secondary py-3 text-primary text-uppercase mb-4" type="button">Proceed to Payment</a>
                             </div>
                         </div>
                     </div>

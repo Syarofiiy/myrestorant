@@ -4,8 +4,8 @@
                     <div class="row g-4">
                         <div class="col-lg-6">
                             <a href="#">
-                                <h1 class="text-primary mb-0">Restoranku</h1>
-                                <p class="text-secondary mb-0">Pilihan Lezat di Ujung Jari Anda!</p>
+                                <h1 class="text-primary mb-0">My Restorant</h1>
+                                <p class="text-secondary mb-0">Delicious Choices at Your Fingertips!</p>
                             </a>
                         </div>
                         <div class="col-lg-6">
@@ -21,23 +21,23 @@
                 <div class="row g-5">
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-item">
-                            <h4 class="text-light mb-3">Mengapa orang suka!</h4>
-                            <p class="mb-4">Kami menghadirkan kemudahan, pilihan menu terbaik, dan layanan cepat yang membuat pengalaman kuliner Anda lebih menyenangkan!</p>
+                            <h4 class="text-light mb-3">Why People Love Us!</h4>
+                            <p class="mb-4">We offer convenience, the best menu selections, and fast service to make your dining experience more enjoyable!</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-item">
-                            <h4 class="text-light mb-3">Hubungi Kami</h4>
-                            <p>Alamat: Jl. Sangkuriang No.8, Padasuka, Kec. Cimahi Tengah, Kota Cimahi, Jawa Barat 40526</p>
+                            <h4 class="text-light mb-3">Contact Us</h4>
+                            <p>Address: Jl. Sangkuriang No.8, Padasuka, Kec. Cimahi Tengah, Kota Cimahi, West Java 40526</p>
                             <p>Email: info@codepolitan.com</p>
-                            <p>Telp: 0899-9488-990</p>
+                            <p>Phone: 0899-9488-990</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="d-flex flex-column text-start footer-item">
-                            <h4 class="text-light mb-3">Metode Pembayaran</h4>
+                            <h4 class="text-light mb-3">Payment Methods</h4>
                             <a class="btn-link" href="">QRIS</a>
-                            <a class="btn-link" href="">Tunai</a>
+                            <a class="btn-link" href="">Cash</a>
                         </div>
                     </div>
                 </div>
